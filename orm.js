@@ -2,7 +2,7 @@ var connection = require("./connection.js")
 
 
 
-function GetItems() {
+function getBurger() {
     connection.query('SELECT * FROM burgers', function (err, res) {
         if (err) {
             console.log(err)
@@ -34,4 +34,12 @@ function addBurger(res) {
             console.log(error)
         }
     });
+    }
+
+    module.exports= {
+    getBurger,
+    addBurger,
+    updateBurger,
+
+
     }
