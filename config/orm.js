@@ -14,10 +14,10 @@ function getBurger() {
 }
 function updateBurger(res) {
 connection.query('UPDATE burgers SET ? WHERE ? ', [{
-    devoured: res[0].devoured,
-    burger_name: res[0].burger_name 
+    devoured: res.devoured,
+    burger_name: res.burger_name 
 }, {
-    id: res[0].id
+    id: res.id
 }], function (error) {
     if (error) {
         console.log(error)
@@ -27,8 +27,8 @@ connection.query('UPDATE burgers SET ? WHERE ? ', [{
 
 function addBurger(res) {
     connection.query('UPDATE burgers SET ? WHERE ? ', [{
-        devoured: res[0].devoured,
-        burger_name: res[0].burger_name 
+        devoured: res.devoured,
+        burger_name: res.burger_name 
     }], function (error) {
         if (error) {
             console.log(error)
