@@ -1,4 +1,4 @@
-import {addBurger, UpdateBurger, getBurger  } from "../models/burger";
+const {addBurger, UpdateBurger, getBurger} = require("../models/burger");
 
 var express = require('express');
 

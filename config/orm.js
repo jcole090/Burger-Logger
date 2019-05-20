@@ -1,4 +1,4 @@
-var connection = require("./config/connection.js/index.js")
+var connection = require("./connection.js")
 
 
 

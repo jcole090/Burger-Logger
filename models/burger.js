@@ -1,4 +1,4 @@
-import { addBurger, updateBurger, getBurger } from "../config/orm";
+const{addBurger, updateBurger, getBurger} = require  ("../config/orm");
 //model porcesses data before entering into database. Via orm.
 const getAllBurgers = () =>  getBurger()
 
