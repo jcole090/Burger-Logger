@@ -1,8 +1,10 @@
 const express = require("express");
 
+const bodyParser = require("body-parser");
+
 const {router} = require("./controllers/burgers_controller");
 
-const {addAburger, getAllburgers, updateABurger} = require("./models/burger")
+const {addABurger, getAllburgers, updateABurger} = require("./models/burger")
 
 const exphbs = require('express-handlebars');
 
@@ -14,6 +16,8 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
 
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
 
 res.render('index');
@@ -22,7 +26,9 @@ res.render('index');
 
 app.post('/', (req, res) => {
 
-addAburger(req[0]);    
+console.log("in App.post", req)    
+
+addABurger(req[0]);    
 
 res.status(200);
 
