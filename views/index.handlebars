@@ -1,21 +1,16 @@
-const express = require("express");
+<h1>Its Working!</h1>
 
-const handleBars = require('express-handlebars');
+<form action="" method="POST" role="form">
+    <legend>Create A Burger</legend>
 
-const app = express();
+    <div class="form-group">
+        <label for="">Burger Name</label>
+        <input type="text" class="form-control" id="bInput" placeholder="Input field">
+         <label for="">Have you eaten it</label>
+        <input type="checkbox" class="form-control" id="eInput" placeholder="Input field">
+    </div>
 
-app.engine('handlebars', handleBars());
+    
 
-app.set('view engine', 'handlebars');
-
-app.get('/', (req, res) => {
-
-res.render('index');
-
-});
-
-module.exports= {
-
-app,
-
-}
+    <button type="submit" id="sButton" class="btn btn-primary">Submit</button>
+</form>
